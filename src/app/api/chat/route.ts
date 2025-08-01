@@ -16,17 +16,33 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Generate semantic search query
-    const searchQuery = await generateClipSearchQuery(message);
+    // Generate search query first (this is needed for good results)
+    const searchQuery = await Promise.race([
+      generateClipSearchQuery(message),
+      new Promise<string>((_, reject) => 
+        setTimeout(() => reject(new Error('Search query timeout')), 5000)
+      )
+    ]).catch(() => {
+      console.warn('Search query generation timed out, using fallback');
+      return message.split(' ').slice(0, 3).join(' '); // Simple fallback
+    });
     
-    // Search for relevant clips
-    const clips = await searchFilmClips(searchQuery, 5);
+    // Now search for clips and generate response in parallel
+    const [clips, botResponseText] = await Promise.all([
+      searchFilmClips(searchQuery, 5),
+      Promise.race([
+        generateBotResponse(message),
+        new Promise<string>((_, reject) => 
+          setTimeout(() => reject(new Error('Bot response timeout')), 5000)
+        )
+      ]).catch(() => {
+        console.warn('Bot response generation timed out, using fallback');
+        return "Here's a clip that matches your vibe! 🎬";
+      })
+    ]);
     
-    // Select the best clip (first one for now, can be improved with better ranking)
+    // Select the best clip
     const selectedClip = clips[0];
-    
-    // Generate bot response
-    const botResponseText = await generateBotResponse(message, selectedClip?.title);
 
     // Create user message
     const userMessage: ChatMessage = {
