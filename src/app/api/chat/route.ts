@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Generate search query first (this is needed for good results)
+    // Generate search query with timeout
     const searchQuery = await Promise.race([
       generateClipSearchQuery(message),
       new Promise<string>((_, reject) => 
@@ -27,22 +27,22 @@ export async function POST(request: NextRequest) {
       return message.split(' ').slice(0, 3).join(' '); // Simple fallback
     });
     
-    // Now search for clips and generate response in parallel
-    const [clips, botResponseText] = await Promise.all([
-      searchFilmClips(searchQuery, 5),
-      Promise.race([
-        generateBotResponse(message),
-        new Promise<string>((_, reject) => 
-          setTimeout(() => reject(new Error('Bot response timeout')), 5000)
-        )
-      ]).catch(() => {
-        console.warn('Bot response generation timed out, using fallback');
-        return "Here's a clip that matches your vibe! 🎬";
-      })
-    ]);
-    
-    // Select the best clip
+    // Search for clips
+    const clips = await searchFilmClips(searchQuery, 5);
     const selectedClip = clips[0];
+    
+    // Generate bot response with timeout (now that we have the clip)
+    const botResponseText = await Promise.race([
+      generateBotResponse(message, selectedClip?.title),
+      new Promise<string>((_, reject) => 
+        setTimeout(() => reject(new Error('Bot response timeout')), 5000)
+      )
+    ]).catch(() => {
+      console.warn('Bot response generation timed out, using fallback');
+      return selectedClip?.title 
+        ? `Check out this "${selectedClip.title}" clip! 🎬`
+        : "Here's a clip that matches your vibe! 🎬";
+    });
 
     // Create user message
     const userMessage: ChatMessage = {
