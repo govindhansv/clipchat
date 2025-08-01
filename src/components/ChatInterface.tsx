@@ -77,32 +77,44 @@ export default function ChatInterface() {
   };
 
   return (
-    <div className="flex flex-col h-screen max-w-4xl mx-auto bg-white">
+    <div className="flex flex-col h-screen bg-gray-50 dark:bg-gray-900">
       {/* Header */}
-      <div className="bg-blue-500 text-white p-4">
-        <h1 className="text-xl font-bold">🎬 FilmClip Chat</h1>
-        <p className="text-sm opacity-90">Chat with me and I'll respond with relevant film clips!</p>
+      <div className="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700 p-4">
+        <h1 className="text-xl font-semibold text-gray-800 dark:text-white">
+          Film Clip Chat Bot
+        </h1>
+        <p className="text-sm text-gray-600 dark:text-gray-400">
+          Chat with me and I&apos;ll respond with relevant film clips!
+        </p>
       </div>
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto p-4">
-        {messages.length === 0 ? (
-          <div className="text-center text-gray-500 mt-8">
-            <p>👋 Welcome to FilmClip Chat!</p>
-            <p className="text-sm mt-2">Send me a message and I'll find a perfect film clip to match your mood.</p>
+      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+        {messages.length === 0 && (
+          <div className="text-center text-gray-500 dark:text-gray-400 mt-8">
+            <p>Start a conversation! I&apos;ll respond with film clips related to your messages.</p>
           </div>
-        ) : (
-          messages.map((message) => (
-            <ChatMessage key={message.id} message={message} />
-          ))
         )}
+        
+        {messages.map((message) => (
+          <ChatMessage key={message.id} message={message} />
+        ))}
+        
         {isLoading && (
-          <div className="flex justify-start mb-4">
-            <div className="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg">
-              <p className="text-sm">Finding the perfect clip... 🎬</p>
+          <div className="flex justify-start">
+            <div className="bg-white dark:bg-gray-800 text-gray-800 dark:text-white shadow-sm max-w-xs lg:max-w-md px-4 py-2 rounded-lg">
+              <div className="flex items-center space-x-2">
+                <div className="flex space-x-1">
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                </div>
+                <span className="text-sm">Finding the perfect clip...</span>
+              </div>
             </div>
           </div>
         )}
+        
         <div ref={messagesEndRef} />
       </div>
 

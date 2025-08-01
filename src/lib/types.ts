@@ -5,6 +5,7 @@ export interface ChatMessage {
   timestamp: Date;
   clipUrl?: string;
   clipTitle?: string;
+  hasSound?: boolean;
 }
 
 export interface GiphyClip {

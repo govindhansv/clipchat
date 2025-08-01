@@ -2,6 +2,8 @@ import { GiphyFetch } from '@giphy/js-fetch-api';
 import { GiphyClip } from './types';
 import { optimizeQuery, validateQueryLength, createFallbackQuery } from './query-optimizer';
 
+// Remove custom interface and use the built-in Giphy types
+
 if (!process.env.GIPHY_API_KEY) {
   throw new Error('Please add your Giphy API key to .env');
 }
@@ -23,8 +25,8 @@ export async function searchFilmClips(query: string, limit: number = 10): Promis
     console.log(`[Giphy] Searching with query: "${optimizedQuery}"`);
     const { data } = await gf.search(optimizedQuery, { limit, type: 'gifs' });
     
-    return data.map((gif: any) => ({
-      id: gif.id,
+    return data.map((gif) => ({
+      id: gif.id.toString(),
       url: gif.url,
       title: gif.title,
       images: {
@@ -46,8 +48,8 @@ export async function getTrendingFilmClips(limit: number = 10): Promise<GiphyCli
   try {
     const { data } = await gf.trending({ limit, type: 'gifs' });
     
-    return data.map((gif: any) => ({
-      id: gif.id,
+    return data.map((gif) => ({
+      id: gif.id.toString(),
       url: gif.url,
       title: gif.title,
       images: {
