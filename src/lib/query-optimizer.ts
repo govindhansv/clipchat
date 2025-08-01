@@ -126,6 +126,7 @@ export function optimizeQuery(originalQuery: string, addFilmContext: boolean = t
   console.log(`[Query Optimizer] Scored keywords:`, scoredKeywords.map(k => `${k.word}(${k.score})`));
   
   // Build optimized query by adding highest-scoring words until we hit the limit
+  // eslint-disable-next-line prefer-const
   let optimizedWords: string[] = [];
   let currentLength = 0;
   
