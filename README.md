@@ -1,85 +1,101 @@
-# 🎬 FilmClip Chat
+<img width="3188" height="1202" alt="frame (3)" src="https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7" />
 
-An AI-powered chat application that responds to user messages with contextually relevant film clips from Giphy. Built with Next.js, MongoDB, and Gemini AI for semantic matching.
 
-## Features
+# [Project Name] 🎯
 
-- **AI-Powered Semantic Matching**: Uses Google's Gemini AI to understand user messages and find relevant film clips
-- **Real-time Chat Interface**: Clean, responsive chat UI with message history
-- **Film Clip Integration**: Searches and displays relevant movie/film GIFs from Giphy
-- **Persistent Chat History**: Stores conversations in MongoDB for continuity
-- **Responsive Design**: Works seamlessly on desktop and mobile devices
 
-## Tech Stack
+## Basic Details
+### Team Name: [Name]
 
-- **Frontend**: Next.js 15, React 19, Tailwind CSS
-- **Backend**: Next.js API Routes
-- **Database**: MongoDB
-- **AI**: Google Gemini AI for semantic matching
-- **Media**: Giphy API for film clips
-- **Language**: TypeScript
 
-## Getting Started
+### Team Members
+- Team Lead: [Name] - [College]
+- Member 2: [Name] - [College]
+- Member 3: [Name] - [College]
 
-1. **Clone and install dependencies**:
-```bash
-npm install
-```
+### Project Description
+[2-3 lines about what your project does]
 
-2. **Set up environment variables**:
-Create a `.env` file with:
-```env
-GEMINI_API_KEY=your_gemini_api_key
-GIPHY_API_KEY=your_giphy_api_key
-MONGODB_URI=your_mongodb_connection_string
-```
+### The Problem (that doesn't exist)
+[What ridiculous problem are you solving?]
 
-3. **Run the development server**:
-```bash
-npm run dev
-```
+### The Solution (that nobody asked for)
+[How are you solving it? Keep it fun!]
 
-4. **Open your browser**:
-Navigate to [http://localhost:3000](http://localhost:3000)
+## Technical Details
+### Technologies/Components Used
+For Software:
+- [Languages used]
+- [Frameworks used]
+- [Libraries used]
+- [Tools used]
 
-## How It Works
+For Hardware:
+- [List main components]
+- [List specifications]
+- [List tools required]
 
-1. **User Input**: User types a message in the chat interface
-2. **Semantic Analysis**: Gemini AI analyzes the message to extract relevant keywords and emotions
-3. **Clip Search**: The system searches Giphy for film clips matching the semantic context
-4. **Response Generation**: AI generates a contextual response referencing the selected clip
-5. **Display**: Both the response and film clip are displayed in the chat
-6. **Persistence**: The conversation is saved to MongoDB for future reference
+### Implementation
+For Software:
+# Installation
+[commands]
 
-## API Endpoints
+# Run
+[commands]
 
-- `POST /api/chat` - Send a message and receive a response with film clip
-- `GET /api/chat/history?sessionId=<id>` - Retrieve chat history for a session
+### Project Documentation
+For Software:
 
-## Project Structure
+# Screenshots (Add at least 3)
+![Screenshot1](Add screenshot 1 here with proper name)
+*Add caption explaining what this shows*
 
-```
-src/
-├── app/
-│   ├── api/chat/          # Chat API endpoints
-│   ├── globals.css        # Global styles
-│   ├── layout.tsx         # Root layout
-│   └── page.tsx           # Main chat page
-├── components/
-│   ├── ChatInterface.tsx  # Main chat component
-│   ├── ChatMessage.tsx    # Individual message component
-│   └── ChatInput.tsx      # Message input component
-└── lib/
-    ├── mongodb.ts         # MongoDB connection
-    ├── giphy.ts           # Giphy API integration
-    ├── semantic-matcher.ts # AI semantic matching
-    └── types.ts           # TypeScript types
-```
+![Screenshot2](Add screenshot 2 here with proper name)
+*Add caption explaining what this shows*
 
-## Contributing
+![Screenshot3](Add screenshot 3 here with proper name)
+*Add caption explaining what this shows*
 
-Feel free to submit issues and enhancement requests!
+# Diagrams
+![Workflow](Add your workflow/architecture diagram here)
+*Add caption explaining your workflow*
 
-## License
+For Hardware:
 
-This project is open source and available under the [MIT License](LICENSE).
+# Schematic & Circuit
+![Circuit](Add your circuit diagram here)
+*Add caption explaining connections*
+
+![Schematic](Add your schematic diagram here)
+*Add caption explaining the schematic*
+
+# Build Photos
+![Components](Add photo of your components here)
+*List out all components shown*
+
+![Build](Add photos of build process here)
+*Explain the build steps*
+
+![Final](Add photo of final product here)
+*Explain the final build*
+
+### Project Demo
+# Video
+[Add your demo video link here]
+*Explain what the video demonstrates*
+
+# Additional Demos
+[Add any extra demo materials/links]
+
+## Team Contributions
+- [Name 1]: [Specific contributions]
+- [Name 2]: [Specific contributions]
+- [Name 3]: [Specific contributions]
+
+---
+Made with ❤️ at TinkerHub Useless Projects 
+
+![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
+![Static Badge](https://img.shields.io/badge/UselessProjects--25-25?link=https%3A%2F%2Fwww.tinkerhub.org%2Fevents%2FQ2Q1TQKX6Q%2FUseless%2520Projects)
+
+
