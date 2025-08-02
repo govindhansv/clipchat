@@ -62,8 +62,8 @@ For Software:
 [ Live Site Link ](https://clipchat-opal.vercel.app/)
 
 ## Team Contributions
-- Govind Hans: [Specific contributions]
-- Ayush VP: [Specific contributions]
+- Govind Hans: [Developer]
+- Ayush VP: [Developer]
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
