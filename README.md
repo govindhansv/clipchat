@@ -47,15 +47,10 @@ npm run dev
 ### Project Documentation
 For Software:
 
-# Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+# Screenshots (Home)
+![Screenshot1](https://raw.githubusercontent.com/govindhansv/clipchat/refs/heads/master/homepage.png)
+*Home Page*
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
 
 
 ### Project Demo
