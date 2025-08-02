@@ -1,47 +1,48 @@
 <img width="3188" height="1202" alt="frame (3)" src="https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7" />
 
 
-# [Project Name] 🎯
+# ClipChat 🎯
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: CosmicFarmers
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: Govind Hans - St.Joseph's College, Devagiri
+- Member 2: Ayush VP - St.Joseph's College, Devagiri
 
-### Project Description
-[2-3 lines about what your project does]
+# Project Description
+ClipChat is an AI-powered chat application that responds to user messages with relevant film clips and GIFs. The bot uses semantic matching to find the perfect movie clips that match the conversation context, creating an interactive and entertaining chat experience.
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+Who needs a regular chat bot when you can have one that responds with movie clips? Normal conversations are boring - we need cinematic responses that bring every chat to life with the perfect film moment!
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+We built an AI chat bot that doesn't just talk back - it responds with carefully curated film clips and GIFs that match your conversation. Using semantic matching and Giphy's vast collection, every response becomes a mini movie moment!
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
+- Next.js 15.4.5 (React Framework)
+- TypeScript (Type Safety)
+- MongoDB (Database)
+- Giphy API (Film Clips)
+- OpenAI API (AI Responses)
+- Tailwind CSS (Styling)
 
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
 
 ### Implementation
 For Software:
 # Installation
-[commands]
+```bash
+npm install
+```
 
 # Run
-[commands]
+```bash
+npm run dev
+```
 
 ### Project Documentation
 For Software:
@@ -56,41 +57,18 @@ For Software:
 ![Screenshot3](Add screenshot 3 here with proper name)
 *Add caption explaining what this shows*
 
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
-
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+[ video link ](https://www.youtube.com/watch?v=hSBLIFc1md4)
+*Working of this website*
 
 # Additional Demos
-[Add any extra demo materials/links]
+[ Live Site Link ](https://clipchat-opal.vercel.app/)
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Govind Hans: [Specific contributions]
+- Ayush VP: [Specific contributions]
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
