@@ -51,6 +51,12 @@ For Software:
 ![Screenshot1](https://raw.githubusercontent.com/govindhansv/clipchat/refs/heads/master/homepage.png)
 *Home Page*
 
+![Screenshot2](https://github.com/govindhansv/clipchat/blob/master/home2.png)
+*Chat*
+
+![Screenshot3](https://github.com/govindhansv/clipchat/blob/master/home3.png)
+*Home 2*
+
 
 
 ### Project Demo
